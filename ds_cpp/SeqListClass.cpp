@@ -1,8 +1,8 @@
 //顺序表静态分配和动态分配类的实现文件
 //Created by SunNing,2023.02.19
 
-//包含自制文件
-#include"SeqListClass.h"
+//包含自制文件(使用相对路径即可)
+#include"../ds_h/SeqListClass.h"
 
 //包含系统头文件
 #include<iostream>
@@ -133,7 +133,6 @@ void SeqListStatic::PrintList()
     }
     cout<<"\n";
 }
-
 
 
 /*
