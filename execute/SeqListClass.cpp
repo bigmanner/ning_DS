@@ -2,7 +2,7 @@
 //Created by SunNing,2023.02.19
 
 //包含自制文件(使用相对路径即可)
-#include"../ds_h/SeqListClass.h"
+#include"SeqListClass.h"
 
 //包含系统头文件
 #include<iostream>
