@@ -177,6 +177,31 @@ int Length(List ptrL)
     return kounter;
 }
 
+//7.合并两个升序表为降序表
+List MergeAscendingToDescending(List A,List B)
+{
+
+    //1.获取两表的长度
+    int lengthA=0;//记录A表的长度
+    int lengthB=0;//记录B表的长度
+    lengthA=Length(A);//A表的长度
+    lengthB=Length(B);//B表的长度
+
+    //2.创建目标列表C
+    List C=MakeEmpty();
+
+    //3.创建3个块指针,使其分别指向三个链表的头节点
+    Position ptrNodeA=nullptr;
+    Position ptrNodeB=nullptr;
+    Position ptrNodeC=nullptr;
+    ptrNodeA=A;
+    ptrNodeB=B;
+    ptrNodeC=C;
+    
+    
+
+}
+
 int main()
 {
     //测试

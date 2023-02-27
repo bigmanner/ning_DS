@@ -1,3 +1,4 @@
+//说是叫做线性表，其实应该是顺序表
 //包含系统头文件
 #include<iostream>
 #include<stdio.h>

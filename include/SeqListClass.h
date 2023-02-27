@@ -1,5 +1,8 @@
 #ifndef SEQLISTCLASS_H
 #define SEQLISTCLASS_H
+//包含自定义头文件
+#include<base.h>
+
 //线性表的顺序实现-顺序表
 //1.静态分配顺序表
 //2.动态分配顺序表

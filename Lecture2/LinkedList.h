@@ -36,3 +36,5 @@ void Print(List ptrL);
 //6.求表长(存在首节点的求法)
 int Length(List ptrL);
 
+//7.合并两个升序表为降序表
+List MergeAscendingToDescending(List A,List B);
