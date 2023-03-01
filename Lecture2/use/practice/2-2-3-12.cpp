@@ -1,8 +1,14 @@
+//包含自定义头文件
+#include"CommonFunction.h"
+
 //包含系统头文件
 #include<stdio.h>
 #include<string.h>
 #include<iostream>
 using namespace std;
+
+//全局变量
+ComFunction comFunc;
 
 int findMainElement(int a[],int n)
 {
@@ -33,12 +39,56 @@ int findMainElement(int a[],int n)
         return -1;
 }
 
+//Boyer-Moore投票算法
+int findMainElement2(int a[],int n)
+{
+    comFunc.ArrayPrint(a,n);
+    int mainElement=a[0];
+    int kount=1;//Boyer-Moore算法所用计数器
+    int rekount=0;//第二遍扫描整个数组的计数器
+    cout<<"mainElement:\t"<<mainElement;
+    cout<<"kount:"<<kount<<endl;
+    for(int i=1;i<n;i++)
+    {
+        if(a[i]==mainElement)
+        {
+            kount++;
+        }
+        else
+        {
+            if(kount>1)
+            {
+                kount--;
+            }
+            else if(kount==1)
+            {
+                mainElement=a[i];
+            }
+        }
+        cout<<"mainElement:\t"<<mainElement;
+        cout<<"kount:"<<kount<<endl;
+    }
+
+    //重新扫描一遍整个数组，查看主元出现次数
+    for(int i=0;i<n;i++)
+    {
+        if(mainElement==a[i])
+        {
+            rekount++;
+        }
+    }
+    if(rekount>n/2)
+        return mainElement;
+    else
+        return -1;
+}
+
 int main()
 {
     int n=8;
     int A[8]={0,5,5,3,5,7,5,5};
     int B[8]={0,5,5,3,5,1,5,7};
-    int result=findMainElement(B,n);
+    int result=findMainElement2(B,n);
     cout<<"数组的主元为"<<result<<endl;
     return 0;
 }
