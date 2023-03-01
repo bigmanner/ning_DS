@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std;
 
+//T(n)=O(n),一定不要忘记动态开辟的内存要销毁
+//S(n)=O(n),因为需要开辟n个计数器，所以空间复杂度比较低
 int findMidNum(int a[],int b[],int n)
 {
     int index_A=0;
@@ -34,6 +36,15 @@ int findMidNum(int a[],int b[],int n)
         }
     }
     return midValue;
+}
+
+
+//T(n)=O(logn)
+//S(n)=O(1),该程序的空间复杂度明显优于程序1
+//这个算法比较难理解，先往下做其他的题
+int findMidNum2(int a[],int b[],int n)
+{   
+
 }
 
 int main()
