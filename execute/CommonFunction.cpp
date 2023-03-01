@@ -41,3 +41,42 @@ void ComFunction::ArrayPrint(int i_targetArray[],int i_n)
         }
         cout<<endl;
     }
+
+//3.
+int ComFunction::ArrayBinarySearch(int i_targetArray[],int i_length,int i_searchElement)
+{
+    //二分查找
+    int left=0;
+    int right=i_length-1;
+    int mid=-1;
+    while(left<=right)
+    {
+        mid=(left+right)/2;//计算中间下标
+        if(i_searchElement==i_targetArray[mid])
+        {
+            return mid;
+        }
+        if(i_searchElement<i_targetArray[mid])
+        {
+            right=mid-1;
+        }
+        if(i_searchElement>i_targetArray[mid])
+        {
+            left=mid+1;
+        }
+    }
+    return -1;
+}
+
+/*
+//测试成员函数
+int main()
+{
+    ComFunction comFunc;
+    int A[4]={3,4,5,6};
+    int n=4;
+    int indexOfTarget=comFunc.ArrayBinarySearch(A,4,6);
+    cout<<"二分查找结果为"<<indexOfTarget<<endl;
+    return 0;
+}
+*/
