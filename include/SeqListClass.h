@@ -1,3 +1,6 @@
+//顺序表静态分配和动态分配类的头文件
+//Created by SunNing,2023.02.19
+
 #ifndef SEQLISTCLASS_H
 #define SEQLISTCLASS_H
 //包含自定义头文件
@@ -10,7 +13,7 @@
 //静态分配顺序表全局变量
 #define MAXSIZE 100
 #define ElementTypeS int
-typedef class SeqListStatic SList;//定义类型，可用引用的方式进行处理传参
+typedef class SeqListStatic SList;//定义类型，可用引用的方式进行传参
 
 //动态分配顺序表全局变量
 #define INITSIZE 100
